@@ -1,13 +1,15 @@
 {
   "name": "theme-helper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Helpers for operating / listening change of theme",
-  "main": "index.ts",
+  "main": "index.js",
+  "module": "index.js",
+  "types": "index.d.ts",
   "repository": "git@github.com:CarterLi/theme-helper.git",
   "author": "李通洲 <carter.li@eoitek.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc -p ."
+    "build": "tsc -d -p ."
   },
   "dependencies": {
     "native-event-bus": "^1.0.0"
