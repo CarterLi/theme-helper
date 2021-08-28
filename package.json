@@ -1,6 +1,6 @@
 {
   "name": "theme-helper",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Helpers for operating / listening change of theme",
   "main": "index.js",
   "module": "index.js",
@@ -12,9 +12,9 @@
     "build": "tsc -d -p ."
   },
   "dependencies": {
-    "native-event-bus": "^1.0.0"
+    "native-event-bus": "^1.0.1"
   },
   "devDependencies": {
-    "typescript": "^4.1.3"
+    "typescript": "^4.4.2"
   }
 }

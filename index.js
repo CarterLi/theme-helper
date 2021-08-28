@@ -6,7 +6,9 @@ export const $theme = {
         return theme;
     },
     set(value) {
-        document.documentElement.classList.replace(`theme-` + (value === 'white' ? 'black' : 'white'), 'theme-' + value);
+        if (!document.documentElement.classList.replace(`theme-` + (value === 'white' ? 'black' : 'white'), 'theme-' + value)) {
+            document.documentElement.classList.add('theme-' + value);
+        }
     },
     onchange(callback) {
         bus.on('change', callback);

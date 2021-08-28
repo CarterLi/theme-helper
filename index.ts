@@ -1,6 +1,6 @@
 import { EventBus } from 'native-event-bus';
 
-type ThemeOptions = 'white' | 'black';
+export type ThemeOptions = 'white' | 'black';
 const bus = new EventBus<ThemeOptions>('theme-change');
 let theme: ThemeOptions = document.documentElement.classList.contains('theme-white') ? 'white' : 'black';
 
@@ -9,7 +9,9 @@ export const $theme = {
     return theme;
   },
   set(value: 'white' | 'black') {
-    document.documentElement.classList.replace(`theme-` + (value === 'white' ? 'black' : 'white'), 'theme-' + value);
+    if (!document.documentElement.classList.replace(`theme-` + (value === 'white' ? 'black' : 'white'), 'theme-' + value)) {
+      document.documentElement.classList.add('theme-' + value);
+    }
   },
   onchange(callback: (event: CustomEvent<ThemeOptions>) => void) {
     bus.on('change', callback);
