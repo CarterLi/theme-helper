@@ -1,6 +1,6 @@
 {
   "name": "theme-helper",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Helpers for operating / listening change of theme",
   "main": "index.js",
   "module": "index.js",
